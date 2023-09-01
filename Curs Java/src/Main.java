@@ -7,6 +7,7 @@
 // Press Ctrl+F5 or click the green arrow button in the gutter to run the code.
 
 import java.util.Scanner; 
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,7 +51,59 @@ public class Main {
         String age = introducere_by_user.nextLine();
 
         System.out.print("Buna " + name);
-        System.out.print( "Ai " + age + " ani");
+        System.out.print( "Ai " + age + " ani \n");
+
+        //----- Expresii----//
+                  /*expresii = operatii & operanti
+                    operatii = + - * / %
+                    operanti = valori , variabile ,numere , cantitat
+                   */
+        int numere = 10;
+        numere = numere +1;  // numere++;
+        double numar = (double) numere / 3;
+
+        System.out.print(numere);
+        System.out.print('\n');
+        System.out.print(numar);
+        System.out.print('\n');
+
+        //-----Functia Math---//
+
+        double NUM1 = 4;
+        double NUM2 = 3.14;
+        double NUMZ = Math.abs(y);   // absolut number
+        double NUMSQRT = Math.sqrt(NUM1);    // radacina patrata
+
+        System.out.print(z);
+        System.out.print('\n');
+        System.out.print(NUMSQRT);
+        System.out.print('\n');
+
+        //Exercitiu   :     Aflam ipotenuza unui triunghi dreptunghic cu lat introduse de la tastatura
+        double AB;
+        double AC;
+        double BC;
+        Scanner laturi = new Scanner(System.in);
+
+        System.out.print("Introdu Latura AB \n");      // intoducerea de la tastatura a valorii pt laturi
+        AB =  laturi.nextDouble();     //atribuierea acestora variabilelor
+        System.out.print("Introdu Latura AC \n");
+        AC =  laturi.nextDouble();
+
+        BC=Math.sqrt((AB*AB)+(AC*AC));     //formula pentru BC
+        System.out.print("Ipotenuza este egala cu :"+ BC);
+        System.out.print("\n");
+
+        //-----Functia Random----//
+
+        Random random = new Random();
+        int Nrz = random.nextInt();
+        double Nr2 = random.nextDouble();
+        boolean Nr3 = random.nextBoolean();
+
+        System.out.print("Nr random de tip int e :"+ Nrz);
+        System.out.print("Nr random de tip double e :"+Nr2);
+        System.out.print("Var random de tip boolean e "+ Nr3);
     }
 }
 
